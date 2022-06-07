@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">Reservi</string>
+<string name="facebook_app_id">3301619106825910</string> 
+<string name="fb_login_protocol_scheme">fb3301619106825910</string>
+<string name="facebook_client_token">6d700fa3dc42716aae5cc2ef3d548cc5</string>
+</resources>
+
+
