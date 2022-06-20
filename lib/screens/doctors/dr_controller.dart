@@ -91,16 +91,18 @@ class DrController extends GetxController {
 
   @override
   void onInit() async {
+    super.onInit();
     await getLocation();
     await getdoctroe();
     // TODO: implement onInit
-    super.onInit();
+    
   }
 
   @override
   void onReady() async {
+    super.onReady();
     await getLocation();
     // TODO: implement onReady
-    super.onReady();
+    
   }
 }

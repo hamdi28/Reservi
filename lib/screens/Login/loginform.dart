@@ -34,9 +34,6 @@ class Loginform extends StatelessWidget {
               DelayedAnimation(
                 delay: 3500,
                 child: TextFormField(
-                  onChanged: (Value) {
-                    emailcontroller.text = Value;
-                  },
                   controller: emailcontroller,
                   keyboardType: TextInputType.emailAddress,
                   validator: (value) {

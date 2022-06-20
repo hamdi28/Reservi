@@ -11,11 +11,12 @@ class Searchcontroller extends GetxController {
   getsearch(String query) async {
     FirebaseFirestore.instance
         .collection('Doctors')
-        .where('nomdocteur', isEqualTo: query)
+        .where('nomdocteur'.toLowerCase(), isGreaterThanOrEqualTo: query)
+        .where('nomdocteur'.toLowerCase(), isLessThanOrEqualTo: "$query+\uf7ff")
         .get()
         .then((value) {
       searchres.value = value.docs;
-      //print(value.docs);
+      print(value.docs);
 
       update();
     });
