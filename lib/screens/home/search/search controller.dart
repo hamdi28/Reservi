@@ -46,8 +46,8 @@ class Searchcontroller extends GetxController {
   }
 
   @override
-  void onInit() {
-    getall();
+  void onInit() async {
+    await getall();
 
     super.onInit();
   }

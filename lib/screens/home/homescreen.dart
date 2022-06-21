@@ -9,6 +9,7 @@ import 'package:reservi/screens/appoimets/allappoiments/listappoiment.dart';
 import 'package:reservi/screens/appoimets/booking/bookingnew.dart';
 import 'package:reservi/screens/home/homecontroler.dart';
 import 'package:reservi/screens/home/search/search_screen.dart';
+import 'package:reservi/screens/settings/settings.dart';
 import 'package:reservi/screens/user/profile/profile_screen.dart';
 
 import '../shared/animation.dart';
@@ -234,20 +235,25 @@ class Homepage extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: const <Widget>[
-                                    CircleAvatar(
-                                      radius: 30.0,
-                                      backgroundColor: Colors.blue,
-                                      child: Icon(Icons.settings),
-                                    ),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-                                    Text('   Parametre      ')
-                                  ],
+                              GestureDetector(
+                                onTap: () {
+                                  Get.to(const SettigScreen());
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: const <Widget>[
+                                      CircleAvatar(
+                                        radius: 30.0,
+                                        backgroundColor: Colors.blue,
+                                        child: Icon(Icons.settings),
+                                      ),
+                                      SizedBox(
+                                        height: 5.0,
+                                      ),
+                                      Text('   Parametre      ')
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],
