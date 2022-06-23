@@ -31,8 +31,8 @@ class Searchcontroller extends GetxController {
     }
   }
 
-  getall() async {
-    FirebaseFirestore.instance
+  Future<dynamic> getall() async {
+    var response = await FirebaseFirestore.instance
         .collection('Doctors')
         .orderBy('rate', descending: true)
         .get()
@@ -42,13 +42,14 @@ class Searchcontroller extends GetxController {
 
       update();
     });
-    // FirebaseFirestore.instance.collection('doctor').doc().id;
+    return response;
   }
 
   @override
   void onInit() async {
-    await getall();
-
-    super.onInit();
+    await getall().then((value) {
+      print(value);
+      super.onInit();
+    });
   }
 }
